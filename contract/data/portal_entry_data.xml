@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Odoo 20 : une carte du portail est un enregistrement portal.entry,
+         plus un xpath dans portal.portal_my_home. -->
+    <record id="portal_entry_contract" model="portal.entry">
+        <field name="name">Contracts</field>
+        <field name="description">Follow your contracts</field>
+        <field name="url">/my/contracts</field>
+        <field name="image" type="bytes" file="contract/static/src/img/contract_icon.svg"/>
+        <field name="placeholder_count">contract_count</field>
+        <field name="category">common_category</field>
+        <field name="sequence" eval="60"/>
+    </record>
+</odoo>

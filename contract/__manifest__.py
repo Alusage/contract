@@ -36,6 +36,7 @@
         "views/contract_line.xml",
         "views/res_partner_view.xml",
         "views/res_config_settings.xml",
+        "data/portal_entry_data.xml",
         "views/contract_portal_templates.xml",
         "wizards/contract_manually_create_invoice.xml",
     ],
