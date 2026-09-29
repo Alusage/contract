@@ -679,12 +679,10 @@ class TestContract(TestContractBase):
             show_contract,
             {
                 **show_contract,
-                **{
-                    "name": "Customer Contracts",
-                    "type": "ir.actions.act_window",
-                    "res_model": "contract.contract",
-                    "xml_id": "contract.action_customer_contract",
-                },
+                "name": "Customer Contracts",
+                "type": "ir.actions.act_window",
+                "res_model": "contract.contract",
+                "xml_id": "contract.action_customer_contract",
             },
             "There was an error and the view couldn't be opened.",
         )

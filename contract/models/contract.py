@@ -695,10 +695,12 @@ class ContractContract(models.Model):
         # Invoice by companies, so assignation emails get correct context
         for company in companies:
             contracts_to_invoice = contracts.filtered(
-                lambda contract, comp=company: contract.company_id == comp
-                and (
-                    not contract.date_end
-                    or contract.recurring_next_date <= contract.date_end
+                lambda contract, comp=company: (
+                    contract.company_id == comp
+                    and (
+                        not contract.date_end
+                        or contract.recurring_next_date <= contract.date_end
+                    )
                 )
             ).with_company(company)
             _recurring_create_func(contracts_to_invoice, date_ref)
