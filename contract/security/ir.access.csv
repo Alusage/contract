@@ -18,3 +18,4 @@ rule_contract_line_multi_company,Contract line multi-company,model_contract_line
 rule_contract_template_multi_company,Contract template multi-company,model_contract_template,,crud,"[('company_id', 'in', company_ids)]"
 rule_contract_template_line_multi_company,Contract template line multi-company,model_contract_template_line,,crud,"[('company_id', 'in', company_ids)]"
 contract_contract_see_all,See All Contracts,contract.model_contract_contract,,crud,"[(1,'=',1)]"
+rule_contract_contract_portal,Contract contract portal,model_contract_contract,base.group_portal,crud,"[('message_partner_ids', 'in', [user.partner_id.id])]"
